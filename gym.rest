@@ -1,0 +1,79 @@
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username":"test",
+    "password":"123"
+}
+###
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "name":"test name",
+    "username":"test",
+    "password":"123"
+}
+
+###
+GET http://localhost:3001/api/users
+
+
+###
+POST http://localhost:3001/api/exercises/getAllEx
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxZjdhYjA1NDViMmU4OGNhNjE5YzRiMSIsImlhdCI6MTY0NjI0MzE4OCwiZXhwIjoxNjU0MDE5MTg4fQ.4up74C8_Swy6pe7R9sEvXGIYbfejzviXVXWN8K2hSB8
+
+{
+    "workoutId":"61f7ac7aa7a1d06fd41d75f1"
+}
+###
+POST http://localhost:3001/api/exercises
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxZjdhYjA1NDViMmU4OGNhNjE5YzRiMSIsImlhdCI6MTY0NjI0MzE4OCwiZXhwIjoxNjU0MDE5MTg4fQ.4up74C8_Swy6pe7R9sEvXGIYbfejzviXVXWN8K2hSB8
+
+{
+    "name":"Row",
+    "workout":"61f7ac7aa7a1d06fd41d75f1"
+}
+
+
+###
+GET http://localhost:3001/api/exercises/61f1a31380a9a257cf8578ca
+
+###
+DELETE http://localhost:3001/api/exercises/61f1a31380a9a257cf8578ca
+
+###
+
+
+
+###
+GET http://localhost:3001/api/workouts
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxZjdhYjA1NDViMmU4OGNhNjE5YzRiMSIsImlhdCI6MTY0NjI0MzE4OCwiZXhwIjoxNjU0MDE5MTg4fQ.4up74C8_Swy6pe7R9sEvXGIYbfejzviXVXWN8K2hSB8
+###
+
+POST http://localhost:3001/api/workouts
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxZjNjNmMwOTA0NGQxODAwNGM5MDYwMiIsImlhdCI6MTY0MzQ1ODY2NywiZXhwIjoxNjUxMjM0NjY3fQ.3c46_AUUja1Id8oeR8oz8G8Gs3T9j_3nevDg__gGuzY
+
+{
+    "name":"workout 1"
+}
+
+
+###
+GET http://localhost:3001/api/workouts/61f7ac7aa7a1d06fd41d75f1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxZjdhYjA1NDViMmU4OGNhNjE5YzRiMSIsImlhdCI6MTY0NjI0MzE4OCwiZXhwIjoxNjU0MDE5MTg4fQ.4up74C8_Swy6pe7R9sEvXGIYbfejzviXVXWN8K2hSB8
+
+###
+POST http://localhost:3001/api/sets
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjYxZjdhYjA1NDViMmU4OGNhNjE5YzRiMSIsImlhdCI6MTY0NjI0MzE4OCwiZXhwIjoxNjU0MDE5MTg4fQ.4up74C8_Swy6pe7R9sEvXGIYbfejzviXVXWN8K2hSB8
+Content-Type: application/json
+
+{
+    "reps":5,
+    "weight":100,
+    "exercise":"61f9589073e0b5c35e290ab1"
+}
